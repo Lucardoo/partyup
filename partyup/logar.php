@@ -8,7 +8,7 @@ $sql="SELECT * FROM usuario WHERE email='$email' AND senha='$senha'";
 $resultado=mysqli_query($conexao,$sql);
 if(mysqli_num_rows($resultado)>0){
 
-    $usuario=mysqli_fetch_assoc($resultado);
+    $usuario = mysqli_fetch_assoc($resultado);
 	$_SESSION['email'] = $usuario['email'];
 	$_SESSION['senha'] = $usuario['senha'];
 	$_SESSION['id_usuario'] = $usuario['id_usuario'];

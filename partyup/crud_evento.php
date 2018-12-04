@@ -2,12 +2,14 @@
 require_once('inc/cabecalho.php');
 
 if($_SESSION['admin']==1){
-    $sql = "SELECT * FROM usuario ORDER BY id_usuario DESC";
+    $sql =" SELECT evento.id_evento,evento.nome,evento.descricao,evento.dt_evento,evento.cep,evento.cidade,evento.estado,evento.img,usuario.nome as 'nome_usuario'
+            FROM evento
+            INNER JOIN usuario ON usuario.id_usuario = evento.id_usuario";
     
     $resultado_array = mysqli_fetch_all(mysqli_query($conexao, $sql),MYSQLI_ASSOC);
 ?>
 
-    <section class="container"> 
+    <section class="container-fluid bg-secondary"> 
         <main class="row"> 
             <div class="col-12">
                 <div class="cruds text-center">   
@@ -26,11 +28,27 @@ if($_SESSION['admin']==1){
             <th scope="col">CEP</th>
             <th scope="col">Cidade</th>
             <th scope="col">Estado</th>
+            <th scope="col">Banner</th>
             </tr>
                 </thead>
                 <tbody>
                     <?php
-
+                    foreach($resultado_array as $evento):
+                    ?>
+                        <tr>
+                            <td><?php echo $evento['id_evento']; ?></td>
+                            <td><?php echo $evento['nome_usuario']; ?></td>
+                            <td><?php echo $evento['nome']; ?></td>
+                            <td><?php echo $evento['descricao']; ?></td>
+                            <td><?php echo $evento['dt_evento']; ?></td>
+                            <td><?php echo $evento['cep']; ?></td>
+                            <td><?php echo $evento['cidade']; ?></td>
+                            <td><?php echo $evento['estado']; ?></td>
+                            <td><img width="50" src="./img/banners/<?php echo $evento['img'] ?>" alt="Imagem do banner"></td>
+                            
+                        </tr>
+                    <?php
+                    endforeach;
                     ?>
                 </tbody>
                 </table>
