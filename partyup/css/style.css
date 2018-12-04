@@ -1,0 +1,123 @@
+.logo{
+    width: 100%;
+}
+.body {
+    background-color: grey;
+}
+.link-logo{
+    width: 15%;
+}
+.navbar, .modal-content{
+    background: #eca498;
+    background: -moz-linear-gradient(left, #eca498 0%, #e4553c 0%, #e65c00 0%, #b41e00 100%);
+    background: -webkit-linear-gradient(left, #eca498 0%,#e4553c 0%,#e65c00 0%,#b41e00 100%);
+    background: linear-gradient(to right, #eca498 0%,#e4553c 0%,#e65c00 0%,#b41e00 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eca498', endColorstr='#b41e00',GradientType=1 );
+    
+}
+.form-control {
+    border-radius: 0%;
+}
+.navbar a {
+    color: white !important;
+    cursor: pointer;
+}
+
+.navbar button {
+    color: #fff;
+    border-color: #203c3d;
+    border-radius: 0;
+    box-shadow: none !important;
+}
+.navbar button:hover {
+    background-color: #203c3d;
+    border-color: #203c3d;
+}
+
+.navbar button:active{
+    background-color: #203c3d !important;
+    border-color: #203c3d !important;
+
+}
+
+.navbar-collapse{
+    display: inline-flex;
+}
+.thead {
+    color: white;
+    background-color: #203c3d;
+}
+
+.cruds  button {
+    color: #fff;
+    border-color: #203c3d;
+    border-radius: 0;
+    box-shadow: none !important;
+}
+.cruds button:hover {
+    background-color: #203c3d;
+    border-color: #203c3d;
+}
+
+.cruds button:active{
+    background-color: #203c3d !important;
+    border-color: #203c3d !important;
+}
+
+.container  button {
+    color: black;
+    border-color: #203c3d;
+    border-radius: 0;
+    box-shadow: none !important;
+}
+.container button:hover {
+    background-color: #203c3d;
+    border-color: #203c3d;
+}
+
+.container button:active{
+    background-color: #203c3d !important;
+    border-color: #203c3d !important;
+}
+.form_logo{
+    width: 100%;
+    height: 10%;
+}
+.container {
+    width: 50%;
+    height: auto;
+    padding: auto;
+    background-color: lightgrey;
+}
+body, html {
+    height: 100%;
+}
+.cadastro {
+    color: white;
+}
+.modal {
+    color: white;
+}
+.introducao {
+    background: url("../img/festa_home.png");
+ 
+    /* Full height */
+    height: 60%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.introducao h1 {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    position: absolute;
+}
+.logo_introducao {
+    height: 20%;
+    width: 25%;
+    position: absolute;
+    left: 35%;
+}
