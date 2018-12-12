@@ -1,8 +1,7 @@
 <?php 
 require_once('inc/cabecalho.php');
-
 if($_SESSION['admin']==1){
-    $sql =" SELECT evento.id_evento,evento.nome,evento.descricao,evento.dt_evento,evento.cep,evento.cidade,evento.estado,evento.img,usuario.nome as 'nome_usuario'
+    $sql =" SELECT evento.id_evento,evento.nome,evento.descricao,evento.dt_evento,evento.hora,evento.cep,evento.cidade,evento.estado,evento.img,usuario.nome as 'nome_usuario'
             FROM evento
             INNER JOIN usuario ON usuario.id_usuario = evento.id_usuario";
     
@@ -25,10 +24,12 @@ if($_SESSION['admin']==1){
             <th scope="col">Nome do evento</th>
             <th scope="col">Descrição</th>
             <th scope="col">Data</th>
+            <th scope="col">Hora</th>
             <th scope="col">CEP</th>
             <th scope="col">Cidade</th>
             <th scope="col">Estado</th>
             <th scope="col">Banner</th>
+            <th scope="col">Opções</th>
             </tr>
                 </thead>
                 <tbody>
@@ -41,10 +42,17 @@ if($_SESSION['admin']==1){
                             <td><?php echo $evento['nome']; ?></td>
                             <td><?php echo $evento['descricao']; ?></td>
                             <td><?php echo $evento['dt_evento']; ?></td>
+                            <td><?php echo $evento['hora']; ?></td>
                             <td><?php echo $evento['cep']; ?></td>
                             <td><?php echo $evento['cidade']; ?></td>
                             <td><?php echo $evento['estado']; ?></td>
                             <td><img width="50" src="./img/banners/<?php echo $evento['img'] ?>" alt="Imagem do banner"></td>
+                            <td>
+                                <a class="btn btn-info" href="editar_evento.php?id_evento=<?php echo $evento['id_evento']?>">
+                                    Editar</a>
+                                <a class="btn btn-dark"href="exclui_evento.php?id_evento=<?php echo $evento['id_evento']?>">
+                                    Excluir</a>
+                            </td>
                             
                         </tr>
                     <?php

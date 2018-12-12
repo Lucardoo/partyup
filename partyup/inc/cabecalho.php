@@ -9,6 +9,7 @@ include('conexao.php');
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
@@ -31,7 +32,8 @@ include('conexao.php');
         if($_SESSION['admin']==0) {
 
     ?>    
-                    <a href="logout.php" class="mr-2">Logout</a>
+                    <a href="logout.php" class="mr-3">Logout</a>
+                    <a href="meus_eventos.php" class="mr-3">Meus eventos</a>
                 </li>
                 </ul>
                     <button type="button" class="btn btn-outline-success my-2 my-sm-0" onclick="window.location.href='criar_evento.php'">Cadastre seu evento</button>
@@ -58,7 +60,7 @@ include('conexao.php');
         <!-- MODAL LOGIN-->
 
         <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-sm">
+            <div class="modal-dialog">
                 <div class="modal-content">
                 <form id="formLogar" class="logar ml-5 mr-5 mb-5 mt-5" method="POST" action="logar.php">
                     <div class="form-group">
@@ -69,11 +71,28 @@ include('conexao.php');
                         <label for="exampleInputPassword1">Senha</label>
                         <input type="password" class="form-control" name="senha" placeholder="Senha">
                     </div>
+                    <a id="btnlogin" class="nav-link mb-2" data-toggle="modal" data-target=".modalsenha">Esqueceu sua senha ?</a>
                     <button type="submit" class="btn btn-block btn-outline-success my-2 my-sm-0">Logar</button>
                     </form>
                 </div>
             </div>
             </div>  
+
+            <!-- MODAL ESQUECI MINHA SENHA-->
+
+            <div class="modal fade bd-example-modal-sm modalsenha" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <form class="logar ml-5 mr-5 mb-5 mt-5" method="POST" action="logar.php">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Email">
+                    </div>
+                    <button type="submit" class="btn btn-block btn-outline-success my-2 my-sm-0">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            </div>
 
         <!-- MODAL CADASTRO -->
         
@@ -102,9 +121,8 @@ include('conexao.php');
             </div>
             <div class="form-group col-md-4">
                 <label for="estado">Estado</label>
-                <select name="estado" class="form-control">
-                    <option selected>Escolha...</option>
-                    <option>RS</option>
+                <select name="estado" class="form-control" required>
+                    <option selected>RS</option>
                     <option>SC</option>
                 </select>
             </div>

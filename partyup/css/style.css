@@ -1,6 +1,11 @@
 .logo{
     width: 100%;
 }
+
+h1, h2, h3, h4, a, p, input, button, label, placeholder{
+    font-family: 'Roboto', sans-serif;
+}
+
 .body {
     background-color: grey;
 }
@@ -100,24 +105,49 @@ body, html {
 }
 .introducao {
     background: url("../img/festa_home.png");
- 
-    /* Full height */
     height: 60%; 
-
-    /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.introducao h1 {
+.introducao h2 {
+    margin-top: 12%;
+    margin-left: 20%;
     text-align: center;
-    font-size: 30px;
     color: white;
     position: absolute;
 }
+
 .logo_introducao {
     height: 20%;
     width: 25%;
     position: absolute;
     left: 35%;
 }
+.busca .navbar input, button {
+    float: right;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
