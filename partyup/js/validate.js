@@ -70,7 +70,6 @@ $(".cadastro").validate({
 
 $("#form_evento").validate({
     rules : {
-        banner: "required",
         nome: "required",
         cidade: "required",
         endereco: "required",
@@ -90,9 +89,6 @@ $("#form_evento").validate({
         },   
     },
     messages : {
-        banner:{
-            required:"Nenhum arquivo selecionado !"
-        },
         nome:{
             required:"Campo em branco !"
         },

@@ -12,6 +12,7 @@ $resultado1 = mysqli_query($conexao, $sql1);
 
     $sql="INSERT INTO usuario(email,senha,nome,cidade,estado,cep) VALUES('$email','$senha','$nome','$cidade','$estado','$cep')";
     $resultado = mysqli_query($conexao, $sql);
-    header('Location: index.php');
+    echo "<script type='text/javascript'>alert('Usuario cadastrado com sucesso!');</script>";
+    echo "<script> window.location='index.php';</script>";
 
 ?>

@@ -3,12 +3,13 @@ require_once('inc/cabecalho.php');
 if(isset($_SESSION['email'])){
 ?>
 <body>
-<div class="container mt-3 mb-3">
+<div class="container">
+<div class="container_form mt-3 mb-3">
     <img class="form_logo mb-3 mt-3" src="img/form_festa1.png">
     <form id="form_evento" action="cria_evento.php" method="POST" enctype="multipart/form-data">
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="banner">Upload de banner</label><br>
+                <label for="banner">Upload de banner (250x250)</label><br>
                 <input type="hidden" name ="MAX_FILE_SIZE" value="200000">
                 <input type="file" name="banner">
             </div>
@@ -32,7 +33,7 @@ if(isset($_SESSION['email'])){
             <textarea type="text" class="form-control" name="descricao"></textarea>
         </div>
         <div class="form-group">
-            <label for="endereco">Endereço</label>
+            <label for="endereco">Local ou endereço</label>
             <input type="text" class="form-control" name="endereco" placeholder="Ex: Avenida Bento Gonçalvez">
         </div>
         <div class="form-row">
@@ -51,9 +52,10 @@ if(isset($_SESSION['email'])){
                 <label for="cep">CEP</label>
             <input type="text" class="form-control" name="cep" placeholder="Ex: 96058785">
             </div>
+            <button type="submit" class="btn btn-outline-success mb-3 my-2 my-sm-0" >Publicar evento</button>
         </div>
-        <button type="submit" class="btn btn-outline-success mb-3 my-2 my-sm-0" >Publicar evento</button>
     </form>
+</div>
 </div>
 <?php
 require_once('inc/rodape.php');

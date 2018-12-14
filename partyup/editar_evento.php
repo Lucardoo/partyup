@@ -13,6 +13,7 @@ if($_SESSION['admin'] == 1){
 <body>
 <div class="container mt-3 mb-3">
     <form id="form_evento" action="altera_evento.php" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="id_evento" value="<?php echo $id_evento ?>">
     <input type="hidden" name="id_usuario" value="<?php echo $dados['id_evento']; ?>">
         <div class="form-row">
             <div class="form-group col-md-6 mt-2">
@@ -37,10 +38,10 @@ if($_SESSION['admin'] == 1){
         </div>
         <div class="form-group">
             <label for="descricao">Descrição</label>
-            <textarea type="text" class="form-control" name="descricao" value="<?php echo $dados['descricao']; ?>"></textarea>
+            <textarea type="text" class="form-control" name="descricao" ><?php echo $dados['descricao']; ?></textarea>
         </div>
         <div class="form-group">
-            <label for="endereco">Endereço</label>
+            <label for="endereco">Local ou endereço</label>
             <input type="text" class="form-control" name="endereco" value="<?php echo $dados['endereco']; ?>">
         </div>
         <div class="form-row">
@@ -59,8 +60,8 @@ if($_SESSION['admin'] == 1){
                 <label for="cep">CEP</label>
             <input type="text" class="form-control" name="cep" value="<?php echo $dados['cep']; ?>">
             </div>
+            <button type="submit" class="btn btn-outline-success mb-3 my-2 my-sm-0" >Alterar evento</button>
         </div>
-        <button type="submit" class="btn btn-outline-success mb-3 my-2 my-sm-0" >Alterar evento</button>
     </form>
 </div>
 <?php

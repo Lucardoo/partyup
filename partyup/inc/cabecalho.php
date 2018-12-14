@@ -5,6 +5,7 @@ include('conexao.php');
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
 	<title>PartyUp</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
@@ -34,6 +35,7 @@ include('conexao.php');
     ?>    
                     <a href="logout.php" class="mr-3">Logout</a>
                     <a href="meus_eventos.php" class="mr-3">Meus eventos</a>
+                    <a href="editar_perfil.php" class="mr-3">Editar Perfil</a>
                 </li>
                 </ul>
                     <button type="button" class="btn btn-outline-success my-2 my-sm-0" onclick="window.location.href='criar_evento.php'">Cadastre seu evento</button>
@@ -83,7 +85,7 @@ include('conexao.php');
             <div class="modal fade bd-example-modal-sm modalsenha" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                <form class="logar ml-5 mr-5 mb-5 mt-5" method="POST" action="logar.php">
+                <form class="logar ml-5 mr-5 mb-5 mt-5" method="POST" action="esqueceu_senha.php">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email</label>
                         <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Email">
@@ -142,5 +144,5 @@ include('conexao.php');
   </div>
 </nav>
 <?php
-require_once('rodape.php');
+
 ?>

@@ -22,8 +22,8 @@
 
 			$sql = "UPDATE usuario SET nome='$nome',email='$email',cep='$cep',cidade='$cidade',estado='$estado' WHERE id_usuario='$id_usuario'";
 			$altera=mysqli_query($conexao,$sql);
-			$_SESSION['msg'] = 'usuario_editado';
-			header('Location: crud_usuario.php');
+			echo "<script type='text/javascript'>alert('Usuario alterado com sucesso');</script>";
+            echo "<script> window.location='crud_usuario.php';</script>";
 		}
 	}
 	else{

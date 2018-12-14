@@ -34,8 +34,9 @@ if($_SESSION['admin'] == 1){
           <input type="text" name="estado" value="<?php echo $dados['estado']; ?>">
           <br><br><br>
           
-            <button class="btn btn-dark" type="submit" name="botao">Editar Usuário</button>
-            <a href="crud_usuario.php" class="btn btn-dark">Voltar</a>
+          <label><button class="btn btn-dark mr-5" type="submit" name="botao">Editar usuario</button>
+            <a href="index.php" class="btn btn-dark ml-5">Voltar</a>
+            </label>
       </form>
       </div>
 <?php

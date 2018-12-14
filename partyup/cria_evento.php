@@ -21,6 +21,7 @@ if(isset($_SESSION['email'])){
     $sql="INSERT INTO evento(id_usuario,descricao,nome,dt_evento,hora,endereco,cidade,estado,cep,img) 
     VALUES('$id_usuario','$descricao','$nome','$dt_evento','$hora','$endereco','$cidade','$estado','$cep','$nome_arq')";
     var_dump(mysqli_query($conexao,$sql));
-    
+    echo "<script type='text/javascript'>alert('Evento criado com sucesso');</script>";
+    echo "<script> window.location='index.php';</script>";
 }
 ?>

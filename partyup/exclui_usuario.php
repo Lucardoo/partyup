@@ -15,10 +15,12 @@ if($_SESSION['admin'] == 1 ){
         $resultado1 = mysqli_query($conexao, $sql3);
         
         $_SESSION['msg'] = 'usuario_excluido';
-        header('Location: crud_usuario.php');
+        echo "<script type='text/javascript'>alert('Usuario excluido com sucesso!');</script>";
+        echo "<script> window.location='crud_usuario.php';</script>";
 }
 else{
 
-    header('Location: cruds.php');
+    echo "<script type='text/javascript'>alert('ERRO! Não foi possível excluir o Usuário!');</script>";
+    echo "<script> window.location='crud_usuario.php';</script>";
 }
 ?>

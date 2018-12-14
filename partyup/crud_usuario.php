@@ -6,12 +6,12 @@ if($_SESSION['admin']==1){
     
     $usuarios = mysqli_fetch_all(mysqli_query($conexao, $sql),MYSQLI_ASSOC);
 ?>
-<section class="container"> 
+<section class="container-fluid bg-secondary"> 
     <main class="row"> 
         <div class="col-12"> 
             <div class="cruds text-center">   
-                <button type="button" class="btn btn-outline-success my-2 my-sm-0" onclick="window.location.href='crud_usuario.php'">Usuarios</button>
-                <button type="button" class="btn btn-outline-success my-2 my-sm-0" onclick="window.location.href='crud_evento.php'">Eventos</button>
+                <button type="button" class="btn btn-block btn-outline-success my-2 my-sm-0" onclick="window.location.href='crud_usuario.php'">Usuarios</button>
+                <button type="button" class="btn btn-block btn-outline-success my-2 my-sm-0" onclick="window.location.href='crud_evento.php'">Eventos</button>
 	        </div>
             
                     <table class="table">
@@ -37,8 +37,6 @@ if($_SESSION['admin']==1){
                         <td>
                             <a class="btn btn-info" href="edita_usuario.php?id_usuario='.$listagem_usuarios['id_usuario'].'">
                                 Editar</a>
-                            <a class="btn btn-dark"href="exclui_usuario.php?id_usuario='.$listagem_usuarios['id_usuario'].'">
-                                Excluir</a>
                         </td>
                         </tr>';
                         echo $html;
